@@ -16,6 +16,10 @@ const port = process.env.PORT || 3002
 
 app.use(cors());
 
+app.get('/', function (req, res) {
+  res.render('index', {});
+});
+
 
 /* PATHS */
 app.get('/weather', (req, res, next) => {
