@@ -1,5 +1,5 @@
 {
-  "name": "city-exployer-api",
+  "name": "city-explorer-api",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sethppierce/city-exployer-api.git"
+    "url": "git+https://github.com/sethppierce/city-explorer-api.git"
   },
   "author": "Seth Pierce",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sethppierce/city-exployer-api/issues"
+    "url": "https://github.com/sethppierce/city-explorer-api/issues"
   },
-  "homepage": "https://github.com/sethppierce/city-exployer-api#readme",
+  "homepage": "https://github.com/sethppierce/city-explorer-api#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",

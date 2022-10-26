@@ -23,7 +23,7 @@ app.use(cors());
 app.get('/weather', (req, res, next) => {
 
   try {
-    const { lat, lon, ...rest } = req.query
+    const { lat, lon,} = req.query
     console.log(lat)
     const cityName = req.query?.city_name
     const dataToGroom = weatherData.find(city => {
