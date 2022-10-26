@@ -1,13 +1,13 @@
 'use strict';
 
 
-const express = require('express')
-const app = express()
-require('dotenv').config()
+const express = require('express');
+const app = express();
+require('dotenv').config();
 const cors = require('cors');
-let weatherData = require('./data/weather.json')
+let weatherData = require('./data/weather.json');
 
-const port = process.env.PORT || 3002
+const port = process.env.PORT || 3002;
 
 
 
