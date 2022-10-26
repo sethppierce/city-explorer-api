@@ -1,14 +1,12 @@
 'use strict';
 
-
-const express = require('express');
-const app = express();
-require('dotenv').config();
+const express = require('express')
+const app = express()
+require('dotenv').config()
 const cors = require('cors');
-let weatherData = require('./data/weather.json');
+let weatherData = require('./data/weather.json')
 
-const port = process.env.PORT || 3002;
-
+const port = process.env.PORT || 3002
 
 
 
@@ -21,9 +19,9 @@ app.use(cors());
 
 /* PATHS */
 app.get('/weather', (req, res, next) => {
-
+  
   try {
-    const { lat, lon,} = req.query
+    const { lat, lon, ...rest} = req.query
     console.log(lat)
     const cityName = req.query?.city_name
     const dataToGroom = weatherData.find(city => {
@@ -55,9 +53,9 @@ app.get('/weather', (req, res, next) => {
 
 
 
-app.get('*', (req, res) => {
-  res.status(404).send('This route does not exist');
-});
+// app.get('*', (req, res) => {
+//   res.status(404).send('This route does not exist');
+// });
 
 
 class Forecast {
