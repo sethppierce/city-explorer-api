@@ -8,17 +8,14 @@ let weatherData = require('./data/weather.json')
 
 const port = process.env.PORT || 3002
 
-pp.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
-
 
 
 /* MIDDLEWARE */
 
 app.use(cors());
 
-app.get('/', function (req, res) {
-  res.render('index', {});
+app.get('/', (req, res)  => {
+  res.status(200).send('Welcome to my server!');
 });
 
 
@@ -58,9 +55,9 @@ app.get('/weather', (req, res, next) => {
 
 
 
-// app.get('*', (req, res) => {
-//   res.status(404).send('This route does not exist');
-// });
+app.get('*', (req, res) => {
+  res.status(404).send('This route does not exist');
+});
 
 
 class Forecast {
