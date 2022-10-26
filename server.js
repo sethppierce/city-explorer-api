@@ -1,10 +1,10 @@
 'use strict';
 
-const express = require('express')
-const app = express()
-require('dotenv').config()
+const express = require('express');
 const cors = require('cors');
-let weatherData = require('./data/weather.json')
+require('dotenv').config();
+let weatherData = require('./data/weather.json');
+const app = express();
 
 const port = process.env.PORT || 3002
 
@@ -19,16 +19,13 @@ app.get('/weather', (req, res, next) => {
   
   try {
     const { lat, lon, ...rest} = req.query
-    console.log(lat)
     const cityName = req.query?.city_name
     const dataToGroom = weatherData.find(city => {
       return Math.floor(city?.lat) === Math.floor(lat) && Math.floor(city?.lon) === Math.floor(lon)
-    }
-
-    )
-    const dataObj = new CityWeather(dataToGroom);
-    console.log(dataObj)
-    const arrayToGroom = dataObj.data.map(day => {
+    })
+    
+    const weatherObj = new CityWeather(dataToGroom);
+    const arrayToGroom = weatherObj.data.map(day => {
       return ({
         date: day.datetime,
         description: `Low of ${day.low_temp}, high of ${day.high_temp} with ${day.weather.description}`
