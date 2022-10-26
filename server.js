@@ -8,7 +8,8 @@ let weatherData = require('./data/weather.json')
 
 const port = process.env.PORT || 3002
 
-
+pp.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 
 
