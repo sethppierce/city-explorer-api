@@ -21,6 +21,8 @@ Backend server using Node.js, express, dotenv, nodemon, and cors.
 
 10-26-2022 8:51 PM EST - server now has get route to weatheriq api and movieiq api
 
+10-27-2022 4:22PM EST - refactored server.js into modules
+
 ## Credit and Collaborations
 
 Huge Credit to Dennis Nichols, Lewis Benson, and Steven Rejdowski for helping me get caught up yesterday!
@@ -46,3 +48,13 @@ Start time: 4pm EST
 Finish time: 8PM EST
 
 Actual time needed to complete: 4 hours
+
+Name of feature: refactoring
+
+Estimate of time needed to complete: 20 minutes
+
+Start time: 3PM EST
+
+Finish time: 3:15PM EST
+
+Actual time needed to complete: 15 minutes
