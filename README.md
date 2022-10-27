@@ -19,6 +19,8 @@ Backend server using Node.js, express, dotenv, nodemon, and cors.
 
 10-26-2022 10:22AM EST - Application is now a functional express server connected through heroku and ready for use!
 
+10-26-2022 8:51 PM EST - server now has get route to weatheriq api and movieiq api
+
 ## Credit and Collaborations
 
 Huge Credit to Dennis Nichols, Lewis Benson, and Steven Rejdowski for helping me get caught up yesterday!
@@ -32,5 +34,15 @@ Estimate of time needed to complete: 4 hours
 Start time: 9:30pm EST
 
 Finish time: 1:30am EST
+
+Actual time needed to complete: 4 hours
+
+Name of feature: Get Route to WeatherIQ and MovieIQ
+
+Estimate of time needed to complete: 4 hours
+
+Start time: 4pm EST
+
+Finish time: 8PM EST
 
 Actual time needed to complete: 4 hours
