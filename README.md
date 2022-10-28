@@ -23,6 +23,8 @@ Backend server using Node.js, express, dotenv, nodemon, and cors.
 
 10-27-2022 4:22PM EST - refactored server.js into modules
 
+10-28-2022 4:40PM EST - added cache for weather.js and server.js
+
 ## Credit and Collaborations
 
 Huge Credit to Dennis Nichols, Lewis Benson, and Steven Rejdowski for helping me get caught up yesterday!
@@ -58,3 +60,13 @@ Start time: 3PM EST
 Finish time: 3:15PM EST
 
 Actual time needed to complete: 15 minutes
+
+Name of feature: added cache
+
+Estimate of time needed to complete: 20 minutes
+
+Start time: 4PM EST
+
+Finish time: 4:40PM EST
+
+Actual time needed to complete: 40 minutes
