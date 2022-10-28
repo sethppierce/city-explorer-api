@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 3002;
 const getMovies = require('./modules/movies');
 const weather = require('./modules/weather');
 const app = express();
+app.use(cors());
 
 app.get('/weather', weatherHandler);
 app.get('/movies', getMovies);
 
-app.use(cors());
 
 app.get('/', (req, res) => {
   res.status(200).send('Welcome to my server!');
