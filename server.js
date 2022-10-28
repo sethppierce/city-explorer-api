@@ -1,25 +1,26 @@
 'use strict';
 
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();
-const app = express();
-const getWeather = require('./modules/weather');
+const PORT = process.env.PORT || 3002;
 const getMovies = require('./modules/movies');
-const port = process.env.PORT || 3002;
+const weather = require('./modules/weather');
+const app = express();
 
-app.use(cors());
-
-app.get('/', (req, res) => {
-  res.status(200).send('Welcome to my server!');
-});
-
-app.get('/weather', getWeather);
-
+app.get('/weather', weatherHandler);
 app.get('/movies', getMovies);
 
 
-//  Errors
+function weatherHandler(request, response) {
+  const { lat, lon } = request.query;
+  weather(lat, lon)
+    .then(summaries => response.send(summaries))
+    .catch((error) => {
+      console.error(error);
+      response.status(200).send('Sorry. Something went wrong!');
+    });
+}
 
 app.get('*', (req, res) => {
   res.status(404).send('This route is not found');
@@ -31,6 +32,4 @@ app.use((e, req, res, next) => {
 });
 
 
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+app.listen(PORT, () => console.log(`Server up on ${PORT}`));
