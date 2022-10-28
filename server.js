@@ -11,6 +11,7 @@ const app = express();
 app.get('/weather', weatherHandler);
 app.get('/movies', getMovies);
 
+app.use(cors());
 
 function weatherHandler(request, response) {
   const { lat, lon } = request.query;
