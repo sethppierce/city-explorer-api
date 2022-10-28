@@ -13,6 +13,10 @@ app.get('/movies', getMovies);
 
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.status(200).send('Welcome to my server!');
+});
+
 function weatherHandler(request, response) {
   const { lat, lon } = request.query;
   weather(lat, lon)
